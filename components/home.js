@@ -57,12 +57,16 @@ export default function Home() {
         <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" sizes="300x300" href="/apple-touch-icon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Provides users with a repository for links that shows previews of the links and syncs between devices." />
+        <link rel="stylesheet" href="/font-awesome/css/fontawesome-all.min.css" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#454545" />
       </Head>
 
       <table className={mainStyles.mainTable}>
         <tbody>
           <tr>
-            <td>
+            <td colSpan="2">
               {isInProgress ? (
                 <div className={mainStyles.authProgressContainer}>
                   <i className="far fa-spinner-third fa-spin" />
@@ -87,11 +91,14 @@ export default function Home() {
           </tr>
           <tr>
             <td>
+              <label htmlFor="url-input" className={mainStyles.urlLabel}>URL:</label>
+            </td>
+            <td>
               <UrlInput />
             </td>
           </tr>
           <tr>
-            <td valign="top">
+            <td valign="top" colSpan="2">
               <UrlList />
             </td>
           </tr>

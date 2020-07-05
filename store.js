@@ -29,4 +29,4 @@ export const makeStore = (_) => {
   return store;
 };
 
-export const wrapper = createWrapper(makeStore, { debug: true });
+export const wrapper = createWrapper(makeStore, { debug: process.env.NODE_ENV === 'development' });
