@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+}
+
+@import './lato.scss';
+
+body, html {
+  width:   100%;
+  height:  100%;
+  margin:  0;
+  padding: 0;
+}
+
+#__next {
+  width:  100%;
+  height: 100%;
+}
+
+///////////////////////////
+// Text Field Attributes //
+///////////////////////////
+$border-unfocused:                 2px solid #949494;
+$border-focused-color:             #235fc7;
+$border-radius:                    5px;
+$padding:                          5px;
+$placeholder-unfocused-text-color: #949494;
+$text-disabled-color:              #949494;
+$placeholder-focused-text-color:   #ccc;
+
+/////////////////////////
+// Checkbox Attributes //
+/////////////////////////
+// Box
+$checkbox-size:                    18px;
+$checkbox-spacing:                 4px;
+$checkbox-border-radius:           5px;
+$checkbox-unchecked-color:         #eaeaea;
+$checkbox-unchecked-hover-color:   #ccc;
+$checkbox-checked-color:           #235fc7;
+// Checkmark
+$checkmark-left:                   6px;
+$checkmark-top:                    2px;
+$checkmark-short-size:             5px;
+$checkmark-long-size:              10px;
+$checkmark-thickness:              2px;
+$checkmark-transform:              rotate(45deg);
+$checkmark-color:                  #fff;
+// Calculated
+$checkbox-label-left:              $checkbox-size + $checkbox-spacing;
+
+////////////////////////////////
+// Checkbox Switch Attributes //
+////////////////////////////////
+// General
+$radius:                           12px;
+$font-size:                        22px;
+// Animation
+$transition-duration:              250ms;
+// Outer element
+$outer-border-width:               1px;
+$outer-border-color:               #ccc;
+// Knob
+$knob-border-width:                1px;
+$knob-border-color:                #bbb;
+$knob-color:                       #fff;
+$knob-shadow:                      4px 0 6px rgba(0, 0, 0, 0.2);
+// State background colors
+$checked-color:                    #6e6;
+$unchecked-color:                  #fafafa;
+
+// computed
+$size:                             $radius * 2;
+$width:                            $radius * 3;
+$knob-size:                        $size - $knob-border-width * 2;
+$label-padding:                    $radius * 4;
+
+/////////////////
+// Text Fields //
+/////////////////
+textarea.newstyle, input[type=text].newstyle, input[type=password].newstyle, input[type=number].newstyle, input[type=email].newstyle, [contenteditable=true].newstyle {
+  font-family:   'Lato', sans-serif;
+  resize:        none;
+  font-size:     14px;
+  border:        $border-unfocused;
+  border-radius: $border-radius;
+  padding:       $padding;
+  box-sizing:    border-box;
+
+  &:disabled {
+    color: $text-disabled-color;
+  }
+
+  &::placeholder {
+    color: $placeholder-unfocused-text-color;
+  }
+
+  &:focus {
+    border-color: $border-focused-color;
+    outline:      none;
+
+    &::placeholder {
+      color: $placeholder-focused-text-color;
+    }
+  }
+}
+
+// Placeholder support for contenteditable
+[contenteditable=true] {
+  &:empty:before {
+    content: attr(placeholder);
+    display: block;
+    color:   $placeholder-unfocused-text-color;
+  }
+
+  &:focus:empty:before {
+    color: $placeholder-focused-text-color;
+  }
+}
+
+////////////////
+// Checkboxes //
+////////////////
+label.checkbox.newstyle {
+  display:      inline-block;
+  position:     relative;
+  padding-left: $checkbox-label-left;
+  cursor:       pointer;
+  font-family:  'Lato', sans-serif;
+  font-size:    14px;
+  user-select:  none;
+
+  input {
+    position:   absolute;
+    visibility: hidden;
+    cursor:     pointer;
+  }
+
+  span {
+    position:         absolute;
+    top:              0;
+    left:             0;
+    height:           $checkbox-size;
+    width:            $checkbox-size;
+    border-radius:    $checkbox-border-radius;
+    background-color: $checkbox-unchecked-color;
+
+    &:after {
+      content:             '';
+      position:            absolute;
+      display:             none;
+      left:                $checkmark-left;
+      top:                 $checkmark-top;
+      width:               $checkmark-short-size;
+      height:              $checkmark-long-size;
+      border-style:        solid;
+      border-color:        $checkmark-color;
+      border-top-width:    0;
+      border-right-width:  $checkmark-thickness;
+      border-left-width:   0;
+      border-bottom-width: $checkmark-thickness;
+      transform:           $checkmark-transform;
+    }
+  }
+
+  &:hover {
+    input ~ span {
+      background-color: $checkbox-unchecked-hover-color;
+    }
+  }
+
+  input:checked ~ span {
+    background-color: $checkbox-checked-color;
+  }
+
+  input:checked ~ span:after {
+    display: block;
+  }
+}
+
+/////////////////////
+// Checkbox Switch //
+/////////////////////
+label.checkbox-switch {
+  display:      inline-block;
+  position:     relative;
+  padding-left: $label-padding;
+  cursor:       pointer;
+  font-family:  'Lato', sans-serif;
+  font-size:    $font-size;
+  user-select:  none;
+
+  input {
+    position:   absolute;
+    visibility: hidden;
+    cursor:     pointer;
+  }
+
+  input ~ span {
+    position:      absolute;
+    left:          0;
+    top:           0;
+    height:        $size;
+    width:         $width;
+    border-radius: $size;
+    border-color:  $outer-border-color;
+    border-style:  solid;
+    border-width:  $outer-border-width;
+    overflow:      hidden;
+
+    span {
+      position:      absolute;
+      border-radius: $size;
+      top:           0;
+      left:          0;
+
+      &:nth-child(1) {
+        background-color: $checked-color;
+        width:            $width;
+        height:           $size;
+        z-index:          1;
+      }
+
+      &:nth-child(2) {
+        transition-property: all;
+        transition-duration: $transition-duration;
+        background-color:    $knob-color;
+        width:               $knob-size;
+        height:              $knob-size;
+        border-radius:       $knob-size;
+        border-color:        $knob-border-color;
+        border-style:        solid;
+        border-width:        $knob-border-width;
+        z-index:             3;
+        box-shadow:          $knob-shadow;
+      }
+
+      &:nth-child(3) {
+        transition-property: all;
+        transition-duration: $transition-duration;
+        background-color:    $unchecked-color;
+        width:               $width;
+        height:              $size;
+        z-index:             2;
+      }
+    }
+  }
+
+  input:checked ~ span {
+    span:nth-child(n+2) {
+      left: $radius;
+    }
+  }
+}
+
+$switch-width:                     30px;
+$switch-height:                    18px;
+$switch-button-size:               12px;
+$switch-button-indent:             ($switch-height - $switch-button-size) / 2;
+$switch-button-move:               $switch-width - $switch-height;
+$switch-button-transition:         0.4s;
+$switch-off-color:                 #ccc;
+$switch-on-color:                  #2196f3;
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display:  inline-block;
+  width:    $switch-width;
+  height:   $switch-height;
+
+  /* Hide default HTML checkbox */
+  input {
+    position:   absolute;
+    visibility: hidden;
+    width:      0;
+    height:     0;
+  }
+
+  /* The slider */
+  .slider {
+    position:         absolute;
+    cursor:           pointer;
+    top:              0;
+    left:             0;
+    width:            $switch-width;
+    height:           $switch-height;
+    background-color: $switch-off-color;
+    transition:       $switch-button-transition;
+
+    &::before {
+      position:         absolute;
+      content:          '';
+      height:           $switch-button-size;
+      width:            $switch-button-size;
+      left:             $switch-button-indent;
+      bottom:           $switch-button-indent;
+      background-color: #fff;
+      transition:       $switch-button-transition;
+    }
+
+    /* Rounded sliders */
+    &.round {
+      border-radius: $switch-height;
+
+
+      &::before {
+        border-radius: 50%;
+      }
+    }
+  }
+
+
+  input:checked + .slider {
+    background-color: $switch-on-color;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px $switch-on-color;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX($switch-button-move);
+  }
+}

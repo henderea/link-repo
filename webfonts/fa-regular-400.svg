@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+Font Awesome Pro 5.13.1 by @fontawesome - https://fontawesome.com
+License - https://fontawesome.com/license (Commercial License)
+-->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20190801 at Sun Jul  5 14:37:50 2020
+ By root
+Copyright (c) Font Awesome
+</metadata>
+<defs>
+<font id="FontAwesome5Pro-Regular" horiz-adv-x="512" >
+  <font-face 
+    font-family="Font Awesome 5 Pro Regular"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 5 3 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="256 72.5484 503.946 439.689"
+    underline-thickness="25"
+    underline-position="-50"
+    unicode-range="U+0020-F3F4"
+  />
+    <missing-glyph />
+    <glyph glyph-name="spinner-third" unicode="&#xf3f4;" 
+d="M460.116 74.1543l-20.8232 12.0215c-5.54102 3.19922 -7.54004 10.1592 -4.66309 15.874c30.1367 59.8857 28.3428 131.652 -5.38574 189.946c-33.6416 58.3936 -94.8965 95.833 -161.827 99.6758c-6.38867 0.367188 -11.417 5.57715 -11.417 11.9766v24.043
+c0 6.90332 5.80762 12.3369 12.7031 11.9814c83.5557 -4.30566 160.163 -50.8643 202.11 -123.677c42.0625 -72.6963 44.0781 -162.316 6.03027 -236.832c-3.13965 -6.14844 -10.75 -8.46094 -16.7275 -5.00977z" />
+  </font>
+</defs></svg>
