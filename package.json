@@ -10,7 +10,6 @@
   "dependencies": {
     "firebase": "^7.15.5",
     "got": "^11.4.0",
-    "ky": "^0.20.0",
     "metascraper": "^5.12.6",
     "metascraper-description": "^5.11.21",
     "metascraper-image": "^5.11.21",
