@@ -15,9 +15,7 @@ function* signInProcess() {
 
   try {
     const result = yield firebase.auth().signInWithPopup(provider);
-    const { credential, user } = result;
-    window.localStorage.setItem('auth', JSON.stringify(credential.toJSON()));
-    const { uid, displayName, email } = user;
+    const { user: { uid, displayName, email } } = result;
     yield firebase.database().ref(`users/${uid}`).set({
       uid,
       displayName,
