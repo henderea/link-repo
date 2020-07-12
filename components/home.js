@@ -61,6 +61,7 @@ export default function Home() {
         <link rel="stylesheet" href="/font-awesome/css/fontawesome-all.min.css" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#454545" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>
 
       <table className={mainStyles.mainTable}>

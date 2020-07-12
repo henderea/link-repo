@@ -3,7 +3,7 @@
   "short_name": "Link Repo",
   "theme_color": "#454545",
   "background_color": "#ffffff",
-  "display": "minimal-ui",
+  "display": "standalone",
   "Scope": "/",
   "start_url": "/",
   "icons": [
