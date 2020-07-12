@@ -46,6 +46,16 @@ export default function Home() {
           dispatch(authDisconnect());
         }
       });
+      firebase.auth().getRedirectResult().then(async (result) => {
+        if(result.user) {
+          const { uid, displayName, email } = result.user;
+          await firebase.database().ref(`users/${uid}`).set({
+            uid,
+            displayName,
+            email
+          });
+        }
+      });
       dispatch(initialLoadDone());
     }
   });
