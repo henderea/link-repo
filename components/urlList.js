@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeUrl } from '../actions/urlActions';
 import mainStyles from '../styles/main.module.scss';
@@ -11,9 +11,20 @@ const UrlList = () => {
     let element = document.querySelector('#urlList');
     element.scrollTop = 0;
   });
+  let [standalone, setStandalone] = useState(false);
+  useEffect(() => {
+    setStandalone('standalone' in window.navigator && window.navigator.standalone);
+  });
   return (
     <div id="urlList" className={mainStyles.urlList}>
-      {urlData.map(({ logo, title, description, image, url, key }) => (
+      {urlData.map(({
+                      logo,
+                      title,
+                      description,
+                      image,
+                      url,
+                      key
+                    }) => (
         <div className={mainStyles.cardHolder} key={key}>
           <div className={mainStyles.card}>
             <div className={mainStyles.cardClose} onClick={() => dispatch(removeUrl(key))}>&times;</div>
@@ -24,12 +35,14 @@ const UrlList = () => {
                 </span>
               )}
               <span className={mainStyles.cardHeaderTitle}>
-              <a href={url} target="_blank">{title}</a>
+              <a href={/^https:[/][/]drive.google.com/.test(url) && standalone ? `googledrive://${url}` : url} target="_blank">{title || url}</a>
             </span>
             </div>
-            <div className={mainStyles.cardDescription}>
-              {description}
-            </div>
+            {description && (
+              <div className={mainStyles.cardDescription}>
+                {description}
+              </div>
+            )}
             {image && (
               <div className={mainStyles.cardImage}>
                 <img className={mainStyles.cardImageImage} src={image} alt={title} />

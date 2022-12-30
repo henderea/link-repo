@@ -11,10 +11,10 @@ const UrlInput = () => {
   const dispatch = useDispatch();
 
   return (
-    <input type="text" id="url-input" tabIndex="0" className={`${mainStyles.urlInput} newstyle`} onChange={(e) => dispatch(typeUrl(e.target.value))} onKeyDown={(e) => {
+    <input type="url" id="url-input" tabIndex="0" className={`${mainStyles.urlInput} newstyle`} onChange={(e) => dispatch(typeUrl(e.target.value))} onKeyDown={(e) => {
       if(isAdding) {
         e.preventDefault();
-      } else if(e.keyCode === 13) {
+      } else if(e.code === 'Enter') {
         e.preventDefault();
         dispatch(addUrl());
       }
