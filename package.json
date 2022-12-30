@@ -9,6 +9,7 @@
     "deploy": "vercel --prod && vercel rm link-repo --safe --yes"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1",
     "firebase": "^9.15.0",
     "got": "^12.5.3",
     "metascraper": "^5.32.4",

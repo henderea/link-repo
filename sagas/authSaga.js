@@ -14,10 +14,10 @@ function* signInProcess() {
   });
 
   try {
-    if('standalone' in window.navigator && window.navigator.standalone) {
-      yield firebase.auth().signInWithRedirect(provider);
-      return;
-    }
+    // if('standalone' in window.navigator && window.navigator.standalone) {
+    //   yield firebase.auth().signInWithRedirect(provider);
+    //   return;
+    // }
     const result = yield firebase.auth().signInWithPopup(provider);
     const { user: { uid, displayName, email } } = result;
     yield firebase.database().ref(`users/${uid}`).set({

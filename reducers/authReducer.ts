@@ -1,4 +1,5 @@
 import { AuthAction, authActionTypes as actionTypes, AuthConnectAction, AuthSignInErrorAction, AuthSignInSuccessAction, AuthSignOutErrorAction } from '../actions/authActions';
+import { HYDRATE } from 'next-redux-wrapper';
 
 export interface AuthState {
   isLoaded: boolean;
@@ -24,8 +25,11 @@ export const INITIAL_STATE: AuthState = {
   email: ''
 };
 
-export default function authReducer(state: AuthState = INITIAL_STATE, action: AuthAction): AuthState {
+export default function authReducer(state: AuthState = INITIAL_STATE, action: AuthAction | { type: typeof HYDRATE }): AuthState {
   switch(action.type) {
+    case HYDRATE: {
+      return { ...state };
+    }
     case actionTypes.SIGNIN: {
       return {
         ...state,

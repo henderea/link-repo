@@ -1,5 +1,6 @@
 import { UrlAction, urlActionTypes as actionTypes, UrlAddUrlErrorAction, UrlDropUrlAction, UrlFetchUrlAction, UrlRemoveUrlAction, UrlRemoveUrlErrorAction, UrlTypeUrlAction } from '../actions/urlActions';
 import { UrlDataEntry } from '../types';
+import { HYDRATE } from 'next-redux-wrapper';
 
 export interface UrlState {
   typedUrl: string;
@@ -21,8 +22,11 @@ export const INITIAL_STATE: UrlState = {
   keyToRemove: null
 };
 
-export default function urlReducer(state: UrlState = INITIAL_STATE, action: UrlAction): UrlState {
+export default function urlReducer(state: UrlState = INITIAL_STATE, action: UrlAction | { type: typeof HYDRATE }): UrlState {
   switch(action.type) {
+    case HYDRATE: {
+      return { ...state };
+    }
     case actionTypes.TYPE_URL: {
       const { url } = (action as UrlTypeUrlAction);
       return {
