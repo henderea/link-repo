@@ -6,7 +6,7 @@ const metascraper = require('metascraper')([
   require('metascraper-logo-favicon')()
 ]);
 
-const got = require('got');
+import got from 'got';
 
 export default async (req, res) => {
   try {

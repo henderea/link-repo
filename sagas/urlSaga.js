@@ -1,7 +1,7 @@
 import { all, put, takeLatest, select } from 'redux-saga/effects';
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/database';
 
 import { urlActionTypes as actionTypes, addUrlSuccess, addUrlError, removeUrlSuccess, removeUrlError } from '../actions/urlActions';
 import { selectUid } from '../selectors/authSelectors';

@@ -6,9 +6,9 @@ import { authConnect, authDisconnect, initialLoadDone, signIn, signOut } from '.
 import UrlList from './urlList';
 import UrlInput from './urlInput';
 import { useEffect } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/database';
 import { dropUrl, fetchUrl } from '../actions/urlActions';
 import initFirebase from '../utils/firebase/initFirebase';
 
