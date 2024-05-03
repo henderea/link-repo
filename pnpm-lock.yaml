@@ -9,31 +9,31 @@ importers:
   .:
     dependencies:
       '@reduxjs/toolkit':
-        specifier: ^1.9.1
+        specifier: ^1.9.7
         version: 1.9.7(react-redux@8.1.3(@types/react@18.3.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react@18.2.0)
       firebase:
-        specifier: ^9.15.0
+        specifier: ^9.23.0
         version: 9.23.0(encoding@0.1.13)
       got:
-        specifier: ^12.5.3
+        specifier: ^12.6.1
         version: 12.6.1
       metascraper:
-        specifier: ^5.32.4
+        specifier: ^5.45.5
         version: 5.45.5
       metascraper-description:
-        specifier: ^5.32.4
+        specifier: ^5.45.0
         version: 5.45.0
       metascraper-image:
-        specifier: ^5.32.4
+        specifier: ^5.45.0
         version: 5.45.0
       metascraper-logo-favicon:
-        specifier: ^5.32.4
+        specifier: ^5.45.2
         version: 5.45.2
       metascraper-title:
-        specifier: ^5.32.4
+        specifier: ^5.45.0
         version: 5.45.0
       metascraper-url:
-        specifier: ^5.32.4
+        specifier: ^5.45.0
         version: 5.45.0
       next:
         specifier: 13.1.1
@@ -51,30 +51,33 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       react-redux:
-        specifier: ^8.0.5
+        specifier: ^8.1.3
         version: 8.1.3(@types/react@18.3.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1)
       redux:
-        specifier: ^4.2.0
+        specifier: ^4.2.1
         version: 4.2.1
       redux-saga:
-        specifier: ^1.2.2
+        specifier: ^1.3.0
         version: 1.3.0
       sass:
-        specifier: ^1.57.1
+        specifier: ^1.76.0
         version: 1.76.0
     devDependencies:
       '@redux-devtools/extension':
-        specifier: ^3.2.3
+        specifier: ^3.3.0
         version: 3.3.0(redux@4.2.1)
+      '@types/node':
+        specifier: ^20.12.8
+        version: 20.12.8
       '@types/react':
-        specifier: ^18.0.26
+        specifier: ^18.3.1
         version: 18.3.1
       typescript:
-        specifier: ^4.9.4
+        specifier: ^4.9.5
         version: 4.9.5
       vercel:
-        specifier: ^28.10.1
-        version: 28.20.0(@types/node@14.18.33)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@14.18.33)(typescript@4.9.5))
+        specifier: ^28.20.0
+        version: 28.20.0(@types/node@20.12.8)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@4.9.5))
 
 packages:
 
@@ -7097,7 +7100,7 @@ snapshots:
   '@npmcli/fs@1.1.1':
     dependencies:
       '@gar/promisify': 1.1.3
-      semver: 7.3.8
+      semver: 7.6.0
 
   '@npmcli/fs@3.1.0':
     dependencies:
@@ -7438,7 +7441,7 @@ snapshots:
     transitivePeerDependencies:
       - babel-plugin-macros
 
-  '@vanilla-extract/integration@6.5.0(@types/node@14.18.33)(sass@1.76.0)(terser@5.31.0)':
+  '@vanilla-extract/integration@6.5.0(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0)':
     dependencies:
       '@babel/core': 7.24.5
       '@babel/plugin-syntax-typescript': 7.24.1(@babel/core@7.24.5)
@@ -7451,8 +7454,8 @@ snapshots:
       lodash: 4.17.21
       mlly: 1.7.0
       outdent: 0.8.0
-      vite: 5.2.11(@types/node@14.18.33)(sass@1.76.0)(terser@5.31.0)
-      vite-node: 1.6.0(@types/node@14.18.33)(sass@1.76.0)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0)
+      vite-node: 1.6.0(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -7547,9 +7550,9 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vercel/remix-builder@1.8.5(@types/node@14.18.33)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@14.18.33)(typescript@4.9.5))':
+  '@vercel/remix-builder@1.8.5(@types/node@20.12.8)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@4.9.5))':
     dependencies:
-      '@remix-run/dev': '@vercel/remix-run-dev@1.15.0(@types/node@14.18.33)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@14.18.33)(typescript@4.9.5))'
+      '@remix-run/dev': '@vercel/remix-run-dev@1.15.0(@types/node@20.12.8)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@4.9.5))'
       '@vercel/build-utils': 6.7.1
       '@vercel/nft': 0.22.5(encoding@0.1.13)
       '@vercel/static-config': 2.0.16
@@ -7573,7 +7576,7 @@ snapshots:
       - ts-node
       - utf-8-validate
 
-  '@vercel/remix-run-dev@1.15.0(@types/node@14.18.33)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@14.18.33)(typescript@4.9.5))':
+  '@vercel/remix-run-dev@1.15.0(@types/node@20.12.8)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@4.9.5))':
     dependencies:
       '@babel/core': 7.24.5
       '@babel/generator': 7.24.5
@@ -7587,7 +7590,7 @@ snapshots:
       '@esbuild-plugins/node-modules-polyfill': 0.1.4(esbuild@0.16.3)
       '@npmcli/package-json': 2.0.0
       '@remix-run/server-runtime': 1.15.0
-      '@vanilla-extract/integration': 6.5.0(@types/node@14.18.33)(sass@1.76.0)(terser@5.31.0)
+      '@vanilla-extract/integration': 6.5.0(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0)
       arg: 5.0.2
       cacache: 15.3.0
       chalk: 4.1.2
@@ -7613,7 +7616,7 @@ snapshots:
       ora: 5.4.1
       postcss: 8.4.38
       postcss-discard-duplicates: 5.1.0(postcss@8.4.38)
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@14.18.33)(typescript@4.9.5))
+      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.12.8)(typescript@4.9.5))
       postcss-modules: 6.0.0(postcss@8.4.38)
       prettier: 2.7.1
       pretty-ms: 7.0.1
@@ -7622,7 +7625,7 @@ snapshots:
       recast: 0.21.5
       remark-frontmatter: 4.0.1
       remark-mdx-frontmatter: 1.1.1
-      semver: 7.3.8
+      semver: 7.6.0
       sort-package-json: 1.57.0
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
@@ -9122,7 +9125,7 @@ snapshots:
       '@types/glob': 7.2.0
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.2.11
+      fast-glob: 3.3.2
       glob: 7.2.3
       ignore: 5.3.1
       merge2: 1.4.1
@@ -10558,13 +10561,13 @@ snapshots:
     dependencies:
       postcss: 8.4.38
 
-  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@14.18.33)(typescript@4.9.5)):
+  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.12.8)(typescript@4.9.5)):
     dependencies:
       lilconfig: 3.1.1
       yaml: 2.4.2
     optionalDependencies:
       postcss: 8.4.38
-      ts-node: 10.9.1(@types/node@14.18.33)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@20.12.8)(typescript@4.9.5)
 
   postcss-modules-extract-imports@3.1.0(postcss@8.4.38):
     dependencies:
@@ -11442,14 +11445,14 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  ts-node@10.9.1(@types/node@14.18.33)(typescript@4.9.5):
+  ts-node@10.9.1(@types/node@20.12.8)(typescript@4.9.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 14.18.33
+      '@types/node': 20.12.8
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
@@ -11671,7 +11674,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@28.20.0(@types/node@14.18.33)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@14.18.33)(typescript@4.9.5)):
+  vercel@28.20.0(@types/node@20.12.8)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@4.9.5)):
     dependencies:
       '@vercel/build-utils': 6.7.1
       '@vercel/go': 2.5.0
@@ -11680,7 +11683,7 @@ snapshots:
       '@vercel/node': 2.12.0(encoding@0.1.13)
       '@vercel/python': 3.1.59
       '@vercel/redwood': 1.1.14(encoding@0.1.13)
-      '@vercel/remix-builder': 1.8.5(@types/node@14.18.33)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@14.18.33)(typescript@4.9.5))
+      '@vercel/remix-builder': 1.8.5(@types/node@20.12.8)(encoding@0.1.13)(sass@1.76.0)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@4.9.5))
       '@vercel/ruby': 1.3.75
       '@vercel/static-build': 1.3.25(encoding@0.1.13)
     transitivePeerDependencies:
@@ -11716,13 +11719,13 @@ snapshots:
 
   video-extensions@1.2.0: {}
 
-  vite-node@1.6.0(@types/node@14.18.33)(sass@1.76.0)(terser@5.31.0):
+  vite-node@1.6.0(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.11(@types/node@14.18.33)(sass@1.76.0)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -11733,13 +11736,13 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.2.11(@types/node@14.18.33)(sass@1.76.0)(terser@5.31.0):
+  vite@5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.17.2
     optionalDependencies:
-      '@types/node': 14.18.33
+      '@types/node': 20.12.8
       fsevents: 2.3.3
       sass: 1.76.0
       terser: 5.31.0
