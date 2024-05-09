@@ -1,0 +1,6 @@
+build
+public/generated
+.vercel
+.next
+public/sw.js
+public/workbox-*.js
