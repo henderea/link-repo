@@ -26,7 +26,7 @@ function* signInProcess() {
       email
     });
     yield put(signInSuccess(uid, displayName, email));
-  } catch(e) {
+  } catch (e) {
     console.error(e);
     yield put(signInError(e.message || String(e)));
   }
@@ -37,7 +37,7 @@ function* signOutProcess() {
     yield firebase.auth().signOut();
     yield put(clearUrls());
     yield put(signOutSuccess());
-  } catch(e) {
+  } catch (e) {
     console.error(e);
     yield put(signOutError(e.message || String(e)));
   }

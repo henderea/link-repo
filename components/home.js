@@ -25,19 +25,19 @@ export default function Home() {
   useEffect(() => {
     if(!isLoaded) {
       initFirebase();
-      firebase.auth().onAuthStateChanged(async user => {
+      firebase.auth().onAuthStateChanged(async (user) => {
         if(user) {
           const uid = user.uid;
           const isConnected = selectIsConnected()(store.getState());
           if(!isConnected) {
-            firebase.database().ref(`/urls/${uid}`).on('child_added', snap => {
+            firebase.database().ref(`/urls/${uid}`).on('child_added', (snap) => {
               const data = snap.val();
               const key = snap.key;
               if(data) {
                 dispatch(fetchUrl(data, key));
               }
             });
-            firebase.database().ref(`/urls/${uid}`).on('child_removed', snap => {
+            firebase.database().ref(`/urls/${uid}`).on('child_removed', (snap) => {
               dispatch(dropUrl(snap.key));
             });
           }
@@ -91,13 +91,13 @@ export default function Home() {
                   )}
                 </div>
               ) : (
-                     <div>
-                       <span onClick={() => dispatch(signIn())} className={mainStyles.signInLink}>Sign In</span>
-                       {hasError && (
-                         <span className={mainStyles.errorMessage}>{errorMessage}</span>
-                       )}
-                     </div>
-                   ))}
+                <div>
+                  <span onClick={() => dispatch(signIn())} className={mainStyles.signInLink}>Sign In</span>
+                  {hasError && (
+                    <span className={mainStyles.errorMessage}>{errorMessage}</span>
+                  )}
+                </div>
+              ))}
             </td>
           </tr>
           <tr>

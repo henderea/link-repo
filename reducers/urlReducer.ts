@@ -95,7 +95,7 @@ export default function urlReducer(state: UrlState = INITIAL_STATE, action: UrlA
       const { key } = (action as UrlDropUrlAction);
       return {
         ...state,
-        urlData: state.urlData.filter(d => d.key !== key)
+        urlData: state.urlData.filter((d) => d.key !== key)
       };
     }
     case actionTypes.CLEAR_URLS: {

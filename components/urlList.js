@@ -18,13 +18,13 @@ const UrlList = () => {
   return (
     <div id="urlList" className={mainStyles.urlList}>
       {urlData.map(({
-                      logo,
-                      title,
-                      description,
-                      image,
-                      url,
-                      key
-                    }) => (
+        logo,
+        title,
+        description,
+        image,
+        url,
+        key
+      }) => (
         <div className={mainStyles.cardHolder} key={key}>
           <div className={mainStyles.card}>
             <div className={mainStyles.cardClose} onClick={() => dispatch(removeUrl(key))}>&times;</div>
@@ -35,8 +35,8 @@ const UrlList = () => {
                 </span>
               )}
               <span className={mainStyles.cardHeaderTitle}>
-              <a href={/^https:[/][/]drive.google.com/.test(url) && standalone ? `googledrive://${url}` : url} target="_blank">{title || url}</a>
-            </span>
+                <a href={/^https:[/][/]drive.google.com/.test(url) && standalone ? `googledrive://${url}` : url} target="_blank">{title || url}</a>
+              </span>
             </div>
             {description && (
               <div className={mainStyles.cardDescription}>

@@ -20,9 +20,9 @@ export default async (req, res) => {
     });
     res.statusCode = 200;
     res.json(metadata);
-  } catch(e) {
+  } catch (e) {
     res.statusCode = 200;
     const url = req.query.url;
     res.json({ url, description: null, title: null, image: null, logo: null });
   }
-}
+};

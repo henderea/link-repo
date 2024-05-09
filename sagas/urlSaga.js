@@ -12,8 +12,8 @@ function* addUrlProcess() {
     const uid = yield select(selectUid());
     const typedUrl = yield select(selectTypedUrl());
     if(typedUrl.length > 0) {
-      const metadata = yield fetch(`/api/metascraper?url=${encodeURIComponent(typedUrl)}`, { method: 'GET' }).then(res => res.json());
-      const {description, title, url, image, logo} = metadata;
+      const metadata = yield fetch(`/api/metascraper?url=${encodeURIComponent(typedUrl)}`, { method: 'GET' }).then((res) => res.json());
+      const { description, title, url, image, logo } = metadata;
       yield firebase.database().ref(`urls/${uid}`).push({
         description,
         title,
@@ -24,7 +24,7 @@ function* addUrlProcess() {
       });
     }
     yield put(addUrlSuccess());
-  } catch(e) {
+  } catch (e) {
     console.error(e);
     yield put(addUrlError(e));
   }
@@ -38,7 +38,7 @@ function* removeUrlProcess() {
       yield firebase.database().ref(`urls/${uid}/${keyToRemove}`).remove();
     }
     yield put(removeUrlSuccess());
-  } catch(e) {
+  } catch (e) {
     console.error(e);
     yield put(removeUrlError(e));
   }
