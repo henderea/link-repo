@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
-    "firebase": "^10.11.1",
+    "firebase": "^10.12.0",
     "got": "^14.2.1",
     "metascraper": "^5.45.5",
     "metascraper-description": "^5.45.0",
@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@redux-devtools/extension": "^3.3.0",
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.12.12",
     "@types/react": "^18.3.2",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
@@ -42,7 +42,7 @@
     "eslint-config-henderea": "1.1.39",
     "eslint-plugin-import": "^2.29.1",
     "typescript": "^5.4.5",
-    "vercel": "^34.1.10"
+    "vercel": "^34.1.14"
   },
   "eslintConfig": {
     "extends": "henderea"
