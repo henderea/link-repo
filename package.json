@@ -14,14 +14,14 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
-    "firebase": "^10.12.0",
+    "firebase": "^10.12.1",
     "got": "^14.3.0",
-    "metascraper": "^5.45.5",
-    "metascraper-description": "^5.45.0",
-    "metascraper-image": "^5.45.0",
-    "metascraper-logo-favicon": "^5.45.2",
-    "metascraper-title": "^5.45.0",
-    "metascraper-url": "^5.45.0",
+    "metascraper": "^5.45.8",
+    "metascraper-description": "^5.45.7",
+    "metascraper-image": "^5.45.7",
+    "metascraper-logo-favicon": "^5.45.7",
+    "metascraper-title": "^5.45.7",
+    "metascraper-url": "^5.45.7",
     "next": "14.2.3",
     "next-pwa": "^5.6.0",
     "next-redux-wrapper": "^8.1.0",
@@ -35,14 +35,14 @@
   "devDependencies": {
     "@redux-devtools/extension": "^3.3.0",
     "@types/node": "^20.12.12",
-    "@types/react": "^18.3.2",
+    "@types/react": "^18.3.3",
     "@typescript-eslint/eslint-plugin": "^7.10.0",
     "@typescript-eslint/parser": "^7.10.0",
     "eslint": "^8.57.0",
     "eslint-config-henderea": "1.1.40",
     "eslint-plugin-import": "^2.29.1",
     "typescript": "^5.4.5",
-    "vercel": "^34.2.0"
+    "vercel": "^34.2.2"
   },
   "eslintConfig": {
     "extends": "henderea"
