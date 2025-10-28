@@ -34,18 +34,17 @@
   },
   "devDependencies": {
     "@redux-devtools/extension": "^3.3.0",
+    "@stylistic/eslint-plugin": "^5.5.0",
     "@types/node": "^20.17.52",
     "@types/react": "^18.3.23",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "^8.57.1",
-    "eslint-config-henderea": "^1.1.55",
-    "eslint-plugin-import": "^2.31.0",
-    "typescript": "^5.8.3",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "eslint": "^9.38.0",
+    "eslint-config-henderea": "^2.0.87",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^16.4.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
     "vercel": "^42.2.0"
-  },
-  "eslintConfig": {
-    "extends": "henderea"
-  },
-  "packageManager": "pnpm@10.11.0"
+  }
 }
